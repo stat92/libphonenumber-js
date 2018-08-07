@@ -45,12 +45,12 @@ generate(input, info.version, included_countries, extended, included_phone_numbe
 	// Write uncompressed metadata into a file for easier debugging
 	if (command_line_arguments.debug)
 	{
-		console.log('Output uncompressed JSON for debugging')
-		fs.writeFileSync(path.join(__dirname, '../metadata.json'), JSON.stringify(output, undefined, 3))
+		console.log('Output uncompressed JS for debugging')
+		fs.writeFileSync(path.join(__dirname, '../metadata.js'), `export default ${JSON.stringify(output, undefined, 3)}`)
 	}
 
 	// Compress the generated metadata
-	fs.writeFileSync(path.join(__dirname, output_file), JSON.stringify(compress(output)))
+	fs.writeFileSync(path.join(__dirname, output_file), `export default ${JSON.stringify(compress(output))}`)
 
 	// Output mobile phone number type examples
 	if (command_line_arguments.examples === 'mobile')
@@ -86,6 +86,6 @@ generate(input, info.version, included_countries, extended, included_phone_numbe
 		},
 		{})
 
-		fs.writeFileSync(path.join(__dirname, '../examples.mobile.json'), JSON.stringify(examples))
+		fs.writeFileSync(path.join(__dirname, '../examples.mobile.js'), `export default ${JSON.stringify(examples)}`)
 	}
 })

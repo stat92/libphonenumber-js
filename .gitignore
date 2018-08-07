@@ -26,15 +26,15 @@ npm-debug.log
 *.sublime-workspace
 
 # webpack build target folder
-/build/
-/es6/
+# /build/
+# /es6/
 
 # browser builds
-/bundle/
+# /bundle/
 
 # metadata
-/metadata.json
-/metadata.full.json
-/metadata.min.json
-/metadata.mobile.json
-/examples.mobile.json
+# /metadata.js
+# /metadata.full.js
+# /metadata.min.js
+# /metadata.mobile.js
+# /examples.mobile.js

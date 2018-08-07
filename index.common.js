@@ -1,7 +1,7 @@
 'use strict'
 
 var custom   = require('./custom')
-var metadata = require('./metadata.min.json')
+var metadata = require('./metadata.min.js')
 
 exports = module.exports = {}
 

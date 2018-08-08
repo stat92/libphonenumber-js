@@ -4,7 +4,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-import compare from 'semver-compare';
+import * as compare from 'semver-compare';
 
 // Added "possibleLengths" and renamed
 // "country_phone_code_to_countries" to "country_calling_codes".

@@ -4,8 +4,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-import * as compare from 'semver-compare';
-
 // Added "possibleLengths" and renamed
 // "country_phone_code_to_countries" to "country_calling_codes".
 var V2 = '1.0.18';
@@ -24,7 +22,7 @@ var Metadata = function () {
 		this.metadata = metadata;
 
 		this.v1 = !metadata.version;
-		this.v2 = metadata.version !== undefined && compare(metadata.version, V3) === -1;
+		this.v2 = metadata.version !== undefined; //&& compare(metadata.version, V3) === -1;
 		this.v3 = metadata.version !== undefined; // && compare(metadata.version, V4) === -1
 	}
 
